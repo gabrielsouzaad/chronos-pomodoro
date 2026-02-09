@@ -7,7 +7,7 @@ export function App() {
   console.log('Oi');
   return (
     <>
-      <Heading />
+      <Heading attr={123} attr2= 'String' >Olá mundo 1</Heading> 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam qui
         temporibus voluptate quae eos neque reiciendis modi harum dignissimos
