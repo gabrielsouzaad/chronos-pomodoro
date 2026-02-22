@@ -4,13 +4,14 @@ import './styles/global.css';
 
 import { Container } from './components/Container';
 import { Heading } from './components/Heading';
+import { Logo } from './components/Logo';
 
 
 export function App() {
   return (
     <>
       <Container>
-        <Heading>LOGO</Heading>
+        <Logo />
      </Container>
 
      <Container>
@@ -20,3 +21,4 @@ export function App() {
     </>
   );
 }
+  
