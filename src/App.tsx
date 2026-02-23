@@ -28,6 +28,7 @@ export function App() {
             <DefaultInput labelText='task'
             id='meuInput'
             type='text' 
+            placeholder='Digite algo'
             />
           </div>
 
