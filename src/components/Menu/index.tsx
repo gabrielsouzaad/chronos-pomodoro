@@ -5,13 +5,23 @@ import { useState } from 'react';
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
+  const [theme, setTheme] = useState<AvailableThemes>('dark');
 
-const [theme, setTheme] = useState<AvailableThemes>('dark');
+  function handleThemeChange(
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) {
 
-  function handleThemeChange(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>){
-    console.log('Clicado', Date.now());
+  event.preventDefault(); 
+
+  console.log('Clicado', Date.now());
+
+  setTheme(prevTheme => {
+    const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+    return nextTheme;
+  });
+
+    document.documentElement.setAttribute('data-theme', theme);
   }
-  event?.preventDefault(); // Não segue o  link
   return (
     <nav className={styles.menu}>
       <h1>{theme}</h1>
