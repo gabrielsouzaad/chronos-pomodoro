@@ -4,6 +4,7 @@ import './styles/theme.css';
 import './styles/global.css';
 import { useState } from 'react';
 import type { TaskStateModel } from './models/TaskStateModel';
+import { TaskContext } from './contexts/TaskContext';
 
 const initialSate: TaskStateModel = {
   tasks: [],
@@ -21,6 +22,10 @@ const initialSate: TaskStateModel = {
 export function App() {
   const [state, setState] = useState(initialSate);
 
-  return <Home state={state} setState={setState} />
+  return (
+  <TaskContext.Provider value={{ outraCoisa: 321 }}>
+    <Home />
+  </TaskContext.Provider>
+  );
  
 }
